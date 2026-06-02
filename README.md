@@ -3,6 +3,8 @@
 
 ![Ubuntu Linux Nautilus Image Converte](imagescreen.png "Ubuntu Linux Nautilus Image Converter")
 
+![Ubuntu Linux Nautilus Image Converter resize screen](resizescreen.png "Ubuntu Linux Nautilus Image Converter Resize screen")
+
 #### Overview
 `ConvertImage.sh` is a Bash script that integrates with the Nautilus file manager in Linux, providing a convenient right-click option to convert image files to different formats. Utilizing `zenity` for a graphical interface and `convert` from ImageMagick, it allows users to easily convert images to JPEG, PNG, or WEBP formats.
 
@@ -20,11 +22,12 @@
 1. Right-click on an image file in Nautilus.
 2. Navigate to 'Scripts' > 'ConvertImage.sh'.
 3. Select the desired output format from the Zenity dialog.
-4. The script will convert the selected image to the chosen format.
+4. Select the desired output size with the slider. (100% is the original size)
+5. The script will convert the selected image to the chosen format and size.
 
 #### Script Details
 The script works as follows:
-- It presents a Zenity list dialog to choose the output image format.
+- It presents a Zenity list dialog to choose the output image format and size.
 - If no format is selected, the script exits.
 - The selected image paths are processed with the `convert` command from ImageMagick to change their format.
 
